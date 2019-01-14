@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <head>
+        <script src="Codilar_Wysiwyg::js/grapes.min.js" />
+        <script src="Codilar_Wysiwyg::js/grapesjs-navbar.min.js" />
+        <script src="Codilar_Wysiwyg::js/grapesjs-component-countdown.min.js" />
+        <script src="Codilar_Wysiwyg::js/grapesjs-preset-webpage.min.js" />
+        <script src="Codilar_Wysiwyg::js/wysiwyg.js" />
+        <css src="Codilar_Wysiwyg::css/grapes.min.css" />
+        <css src="Codilar_Wysiwyg::css/grapesjs-preset-webpage.min.css" />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Codilar\Wysiwyg\Block\CmsPage" name="codilar.wysiwyg.block" template="Codilar_Wysiwyg::wysiwyg-editor.phtml" />
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,27 @@
+<?php
+/**
+ * @var Codilar\Wysiwyg\Block\CmsPage $block;
+ */
+
+?>
+<style>
+    #advanced-wysiwyg{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100000;
+    }
+</style>
+<div id="advanced-wysiwyg" style="display: none">
+    <?php echo $block->getPageContentData(); ?>
+</div>
+<script>
+    require(['jquery'],function ($) {
+        $(document).ready(function () {
+            $(document).on('#advanced-wysiwyg-editor','click',function () {
+                $('#advanced-wysiwyg').show();
+            })
+        })
+    })
+</script>

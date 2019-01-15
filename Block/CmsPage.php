@@ -34,10 +34,16 @@ class CmsPage extends Template
         $this->pageFactory = $pageFactory;
     }
 
+    /**
+     * @return mixed
+     */
     public function getCmsPageId(){
         return $this->getRequest()->getParam('page_id');
     }
 
+    /**
+     * @return string
+     */
     public function getPageContentData(){
 
         if($this->getCmsPageId() == null){
